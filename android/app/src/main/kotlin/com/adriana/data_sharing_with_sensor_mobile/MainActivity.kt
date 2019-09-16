@@ -1,4 +1,4 @@
-package com.example.data_sharing_with_sensor_mobile
+package com.adriana.data_sharing_with_sensor_mobile
 
 import android.os.Bundle
 

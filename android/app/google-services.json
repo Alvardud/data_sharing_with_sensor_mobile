@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "122002728947",
+    "firebase_url": "https://adriana-6a903.firebaseio.com",
+    "project_id": "adriana-6a903",
+    "storage_bucket": "adriana-6a903.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:122002728947:android:75f3d8fc74dc0214de5486",
+        "android_client_info": {
+          "package_name": "com.adriana.data_sharing_with_sensor_mobile"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "122002728947-ufr36s6tgg6h682gmvcs3q45rips6srq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.adriana.data_sharing_with_sensor_mobile",
+            "certificate_hash": "08f877673e1ab7ab61b4bf4aefe5d3cb2107094d"
+          }
+        },
+        {
+          "client_id": "122002728947-ismg5sbt73men7f0p3ff4af8u789logr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBjJBxEGC42ZYzWjPGW8wnQlLsr2IzZy5s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "122002728947-ismg5sbt73men7f0p3ff4af8u789logr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
