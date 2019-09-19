@@ -8,39 +8,57 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  int _pointer;
+  Widget _pointer;
 
-  Widget _customDrawer() {
-    return Drawer(
-        child: Column(
+  Widget _menuElement(String title, int pointer) {
+    return ExpansionTile(
+      title: Text('$title'),
+      leading: Icon(constant.iconsDrawer[pointer]),
       children: <Widget>[
-        Container(height: 250, color: Theme.of(context).primaryColor),
         ListView.builder(
+          padding: EdgeInsets.all(0.0),
           shrinkWrap: true,
-          itemCount: constant.titlesDrawer.length,
+          itemCount: constant.titlesDrawer[pointer].length,
           itemBuilder: (context, index) {
             return ListTile(
-              leading: Icon(constant.iconsDrawer[index]),
-              title: Text(constant.titlesDrawer[index]),
+              title: Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 32.0),
+                  child: Text("${constant.titlesDrawer[pointer][index]}")),
               onTap: () {
-                if (_pointer != index) {
-                  Navigator.pop(context);
-                  setState(() {
-                    _pointer = index;
-                  });
-                }
+                Navigator.pop(context);
+                setState(() {
+                  _pointer = constant.layouts[pointer][index];
+                });
               },
             );
           },
         )
       ],
+    );
+  }
+
+  Widget _customDrawer() {
+    return Drawer(
+        child: SingleChildScrollView(
+      child: Column(
+        children: <Widget>[
+          Container(height: 250, color: Theme.of(context).primaryColor),
+          ListView.builder(
+              padding: EdgeInsets.all(0.0),
+              shrinkWrap: true,
+              itemCount: constant.mainTitlesDrawer.length,
+              itemBuilder: (context, index) {
+                return _menuElement(constant.mainTitlesDrawer[index], index);
+              })
+        ],
+      ),
     ));
   }
 
   @override
   void initState() {
     super.initState();
-    _pointer = 0;
+    _pointer = constant.layouts[0][0];
   }
 
   @override
@@ -53,7 +71,7 @@ class _HomeState extends State<Home> {
         title: Text('Adriana' //TODO: change to user
             ),
       ),
-      body: constant.layouts[_pointer],
+      body: _pointer,
     );
   }
 }
