@@ -37,9 +37,12 @@ class _FirebaseExampleState extends State<FirebaseExample> {
   }
   
   @override
-  Widget build(BuildContext context) {
-    return ListView.builder(
+  void initState() {
+    super.initState();
+  }
 
-    );
+  @override
+  Widget build(BuildContext context) {
+    return Container();
   }
 }

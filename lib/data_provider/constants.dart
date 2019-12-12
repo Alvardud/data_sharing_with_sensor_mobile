@@ -1,11 +1,13 @@
+import 'package:data_sharing_with_sensor_mobile/ui/layouts/dataBaseTest.dart';
 import 'package:data_sharing_with_sensor_mobile/ui/layouts/nodo.dart';
+import 'package:data_sharing_with_sensor_mobile/ui/layouts/reportes_diarios.dart';
 import 'package:flutter/material.dart';
 
 //"Inicio", "Usuarios", "Proyectos", "Nodos"
 const List<List<String>> titlesDrawer = [
   ["Registro", "Modificar", "Listar"],
   ["Registro", "Modificar", "Listar"],
-  ["Reportes Diarios", "Datos historicos"]
+  ["Reportes Diarios", "Datos historicos","Usuarios"]
 ];
 
 List<List<Widget>> layouts = [
@@ -20,8 +22,9 @@ List<List<Widget>> layouts = [
     Container(color: Colors.blueGrey),
   ],
   [
-    Container(color: Colors.white),
+    ReportesDiarios(),
     Nodo(),
+    DataBaseTest(),
   ]
 ];
 

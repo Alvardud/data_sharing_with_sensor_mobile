@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:data_sharing_with_sensor_mobile/ui/layouts/map.dart';
-import 'package:data_sharing_with_sensor_mobile/ui/layouts/charts.dart';
+import 'package:data_sharing_with_sensor_mobile/ui/widgets/map.dart';
+import 'package:data_sharing_with_sensor_mobile/ui/widgets/charts.dart';
 
 class Nodo extends StatefulWidget {
   @override
